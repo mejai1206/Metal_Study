@@ -12,8 +12,8 @@
 		1384A37822C1B389006036BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1384A37622C1B389006036BA /* Main.storyboard */; };
 		1384A38122C1B3C2006036BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384A38022C1B3C2006036BA /* ViewController.swift */; };
 		1384A38922C1B53E006036BA /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384A38822C1B53E006036BA /* Renderer.swift */; };
-		1384A38B22C1BA95006036BA /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384A38A22C1BA95006036BA /* Primitive.swift */; };
 		1384A38D22C1BE70006036BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1384A38C22C1BE70006036BA /* Shaders.metal */; };
+		37C01210297FB8A300D2C3E9 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0120F297FB8A300D2C3E9 /* MathLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		1384A37A22C1B389006036BA /* Pipeline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pipeline.entitlements; sourceTree = "<group>"; };
 		1384A38022C1B3C2006036BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1384A38822C1B53E006036BA /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		1384A38A22C1BA95006036BA /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 		1384A38C22C1BE70006036BA /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		3794BA59297E5C0B00464AE9 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		37C0120F297FB8A300D2C3E9 /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		37F2FF5B297EBD9D00D54500 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,16 +60,16 @@
 		1384A37122C1B388006036BA /* Pipeline */ = {
 			isa = PBXGroup;
 			children = (
-				3794BA59297E5C0B00464AE9 /* Common.h */,
 				1384A37222C1B388006036BA /* AppDelegate.swift */,
 				1384A38022C1B3C2006036BA /* ViewController.swift */,
 				1384A38822C1B53E006036BA /* Renderer.swift */,
 				1384A38C22C1BE70006036BA /* Shaders.metal */,
-				1384A38A22C1BA95006036BA /* Primitive.swift */,
 				1384A37422C1B389006036BA /* Assets.xcassets */,
 				1384A37622C1B389006036BA /* Main.storyboard */,
 				1384A37922C1B389006036BA /* Info.plist */,
 				1384A37A22C1B389006036BA /* Pipeline.entitlements */,
+				37F2FF5B297EBD9D00D54500 /* Common.h */,
+				37C0120F297FB8A300D2C3E9 /* MathLibrary.swift */,
 			);
 			path = Pipeline;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 				1384A38122C1B3C2006036BA /* ViewController.swift in Sources */,
 				1384A38922C1B53E006036BA /* Renderer.swift in Sources */,
 				1384A37322C1B388006036BA /* AppDelegate.swift in Sources */,
-				1384A38B22C1BA95006036BA /* Primitive.swift in Sources */,
 				1384A38D22C1BE70006036BA /* Shaders.metal in Sources */,
+				37C01210297FB8A300D2C3E9 /* MathLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +293,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Pipeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Pipeline/Common.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -311,6 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Pipeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Pipeline/Common.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
